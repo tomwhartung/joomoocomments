@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Joomoo Comments Dummy Menu Option">
+		<message>
+			<![CDATA[A dummy menu option used to process comment form request - used internally]]>
+		</message>
+	</layout>
+	<fields>
+		<fieldset name="request">
+		</fieldset>
+	</fields>
+	<fields name="params">
+		<!-- Basic options. --> 
+		<fieldset name="basic" label="Basic Options">
+			<field name="spacer" type="spacer" class="text" label="No options are available for this menu item type." />
+		</fieldset>
+	</fields>
+</metadata>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.7">
+	<name>com_joomoocomments</name>
+	<creationDate>December 2009</creationDate>
+	<author>Tom Hartung</author>
+	<authorEmail>webmaster@tomhartung.com</authorEmail>
+	<authorUrl>http://tomhartung.com</authorUrl>
+	<copyright>Copyright 2009-2012 tomhartung.com</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>1.7</version>
+	<description>A joomla! component that uses mootools to allow comments to articles in jos_content</description>
+	<administration>
+		<menu>Joomoo Comments</menu>
+		<files folder="admin">
+			<filename>admin.joomoocomments.php</filename>
+			<filename>config.xml</filename>
+			<filename>index.html</filename>
+			<filename>toolbar.joomoocomments.html.php</filename>
+			<filename>toolbar.joomoocomments.php</filename>
+			<folder>controllers</folder>
+			<folder>models</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+	</administration>
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>joomoocomments.php</filename>
+		<folder>assets</folder>
+		<folder>classes</folder>
+		<folder>javascript</folder>
+		<folder>requests</folder>
+		<folder>views</folder>
+	</files>
+	<install />
+	<uninstall />
+</extension>

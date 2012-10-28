@@ -1,0 +1,171 @@
+/**
+ * @version     $Id: joomoocomments.css,v 1.63 2008/11/18 15:31:53 tomh Exp tomh $
+ * @author      Tom Hartung <webmaster@tomhartung.com>
+ * @package     Joomla
+ * @subpackage  joomoocomments
+ * @copyright   Copyright (C) 2008 Tom Hartung. All rights reserved.
+ * @since       1.5
+ * @license     TBD.
+ */
+
+/*
+ * For comments:
+ */
+h4
+{
+	margin-left: 10px;
+}
+div.all_joomoocomments    /* div enclosing all comments */
+{
+	text-align: left;
+}
+div.all_joomoocomments,
+a.joomoocomment_ajax_form,
+div.joomoocomment_ajax_form,
+div.joomoocomment_xhtml_form,
+div.joomoocomment_login_message
+{
+	background-color: black;
+	margin:           6px;
+	padding:          6px;
+}
+div.all_joomoocomments
+{
+	width:            500px;
+}
+div.a_joomoocomment      /* div enclosing a single comment */
+{
+	border:  grey solid 1px;
+	margin:        6px;
+	padding:       6px;
+}
+.underline
+{
+	text-decoration: underline;
+}
+.joomoocomment_heading,
+.joomoocomment_footer
+{
+	width: 100%;
+}
+.joomoocomment_delete_link
+{
+	margin-right: 0;
+	text-align: right;
+}
+.joomoocomment_body
+{
+	margin-left: 10px;
+	text-align:  left;
+}
+.joomoocomment_footer
+{
+	margin-left: 20px;
+	text-align: right;
+}
+.joomoocomment_vote
+{
+	margin: 10px;
+}
+.joomoocomment_js_off
+{
+	border: solid 1px red;
+	color:  red;
+	font-size:   14px;
+	margin-top:   0px;
+	margin-left: 10px;
+	padding: 4px;
+}
+/*
+ * Used when hiding one or more comments and
+ * when the form is hidden (using ajax and user has JavaScript enabled
+ */
+div.comments_hidden_link,
+div.comment_form_hidden_link
+{
+	margin-left:  auto;
+	margin-right: auto;
+	padding:      6px;
+	text-align:   center;
+	width:        100%;
+}
+div.comments_top_link
+{
+	margin-top:  -20px;    /* looks weird somehow... */
+}
+a.slidein_comments
+{
+	padding:          5px;
+}
+a.slidein_comment_form,
+a.joomoocomment_ajax_form
+{
+	background-color: #222222;
+	border:           solid 1px darkgrey;
+	padding:          5px;
+}
+
+/*
+ * For joomoo comment form
+ */
+div.joomoocomment_ajax_form,
+div.joomoocomment_xhtml_form
+{
+	margin:          6px;
+	padding:         6px;
+	text-align:      left;
+}
+div.joomoocomment_form
+{
+	border:     solid 1px grey;
+	padding:         6px;
+}
+form.joomoocomment_form
+{
+	margin:          6px;
+}
+/* The fieldset tag doesn't look right in this form, hmmm....
+ * fieldset.joomoocomment_form { }
+ */
+input.joomoocomment_form,
+textarea.joomoocomment_form
+{
+	margin:          4px;
+	padding:         4px;
+}
+div.joomoocomment_login_message
+{
+	margin:          10px;
+	padding:         10px;
+	text-align: center;
+}
+div#joomoocomment_hp
+{
+	display: none;
+}
+input.submit_joomoocomment
+{
+	margin-top: 9px;
+}
+/*
+ * for response to ajax requests from the server
+ */
+.ajax_log,
+div.joomoocomments_ajax_log
+{
+	margin-top:  10px;
+	margin-left:  auto;
+	margin-right: auto;
+	text-align:   center;
+}
+/*
+ * used only when debugging the ajax functionality
+ */
+div#response_text, div#debug_text_1, div#debug_text_2
+{
+	background-color: black;
+	border: solid 1px white;
+	margin: 4px;
+	padding: 4px;
+}
+

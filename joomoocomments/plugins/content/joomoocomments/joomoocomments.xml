@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.7" type="plugin" group="content">
+	<name>plg_content_joomoocomments</name>
+	<author>Tom Hartung</author>
+	<creationDate>December 2009</creationDate>
+	<copyright>Copyright (C) 2009 - 2012 Tom Hartung. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>webmaster@tomhartung.com</authorEmail>
+	<authorUrl>www.tomhartung.com</authorUrl>
+	<version>1.7</version>
+	<description>Plugin to implement comments on joomla content articles</description>
+	<files>
+		<filename plugin="joomoocomments">joomoocomments.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="all_articles" type="radio" default="0" label="Allow comments to all articles?"
+					description="Allow comments to all articles or use placeholder for specific articles?">
+					<option value="1">All articles</option>
+					<option value="0">Use placehoder</option>
+				</field>
+				<field name="comment_count_text" type="text" default="Full article includes %cc% comments" label="Text for comment count (or 'omit')"
+					description="Short message containing comment count appended to introductory text; '%cc%' becomes 'xx comments'. Specify 'omit' to omit">
+				</field>
+				<field name="ajax_or_full" type="list" default="E" label="Use Ajax or Full request?"
+					description="Use ajax or full request to save and delete comments?  Specify Either to allow Full when user has javascript disabled.">
+					<option value="A">Use Ajax request only</option>
+					<option value="F">Use Full request only</option>
+					<option value="E">Allow Either Ajax or Full</option>
+				</field>
+				<field name="email_on_form" type="radio" default="O" label="Add email to input form?  (Anonymous users only.)"
+					description="Add email field to comment input form?  (Database already has email address of logged-in users.)">
+					<option value="Y">Required</option>
+					<option value="O">Optional</option>
+					<option value="N">Omit</option>
+				</field>
+				<field name="website_on_form" type="radio" default="O" label="Add website to input form?"
+					description="Add website field to comment input form?">
+					<option value="Y">Required</option>
+					<option value="O">Optional</option>
+					<option value="N">Omit</option>
+				</field>
+				<field name="first_last" type="list" default="all" label="Initially display fewer comments"
+					description="Display only X first or last comments initially - with link to display all">
+					<option value="f90">initially show first 90 comments only</option>
+					<option value="f70">initially show first 70 comments only</option>
+					<option value="f50">initially show first 50 comments only</option>
+					<option value="f40">initially show first 40 comments only</option>
+					<option value="f30">initially show first 30 comments only</option>
+					<option value="f25">initially show first 25 comments only</option>
+					<option value="f20">initially show first 20 comments only</option>
+					<option value="f16">initially show first 16 comments only</option>
+					<option value="f13">initially show first 13 comments only</option>
+					<option value="f10">initially show first 10 comments only</option>
+					<option value="f07">initially show first 7 comments only</option>
+					<option value="f05">initially show first 5 comments only</option>
+					<option value="f03">initially show first 3 comments only</option>
+					<option value="f02">initially show first 2 comments only</option>
+					<option value="f01">initially show first comment only</option>
+					<option value="all">always show all comments</option>
+					<option value="l01">initially show last comment only</option>
+					<option value="l02">initially show last 2 comments only</option>
+					<option value="l03">initially show last 3 comments only</option>
+					<option value="l05">initially show last 5 comments only</option>
+					<option value="l07">initially show last 7 comments only</option>
+					<option value="l10">initially show last 10 comments only</option>
+					<option value="l13">initially show last 13 comments only</option>
+					<option value="l16">initially show last 16 comments only</option>
+					<option value="l20">initially show last 20 comments only</option>
+					<option value="l25">initially show last 25 comments only</option>
+					<option value="l30">initially show last 30 comments only</option>
+					<option value="l40">initially show last 40 comments only</option>
+					<option value="l50">initially show last 50 comments only</option>
+					<option value="l70">initially show last 70 comments only</option>
+					<option value="l90">initially show last 90 comments only</option>
+				</field>
+				<field name="minimum_to_hide" type="list" default="3" label="Minimum number of comments to hide"
+					description="Minimum number to hide - it seems silly to hide just one or two comments">
+					<option value="1">hide at least 1</option>
+					<option value="2">hide at least 2</option>
+					<option value="3">hide at least 3</option>
+					<option value="4">hide at least 4</option>
+					<option value="5">hide at least 5</option>
+					<option value="6">hide at least 6</option>
+					<option value="7">hide at least 7</option>
+					<option value="8">hide at least 8</option>
+					<option value="9">hide at least 9</option>
+					<option value="10">hide at least 10</option>
+				</field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="spam_flag_email" type="radio" default="1" label="Send Spam Flag Email"
+						description="Sends email (to Global Config->System->Mail from address) when spam flag for a comment is set">
+					<option value="1">Send</option>
+					<option value="0">Don't Send</option>
+				</field>
+				<field name="max_consecutive_comments" type="list" default="5" label="Maximum Consecutive Comments"
+					description="Maximum number of comments a user can add to an article or gallery image between page reloads">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="10">10</option>
+					<option value="12">12</option>
+					<option value="15">15</option>
+					<option value="20">20</option>
+					<option value="u">Unlimited</option>
+				</field>
+				<field name="editable_name" type="radio" default="0" label="Editable Name Field?"
+					description="Allow users to edit the name field in the form">
+					<option value="1">Editable</option>
+					<option value="0">Preset and Read-only</option>
+				</field>
+				<field name="log_ips" type="radio" default="A" label="Log IP Addresses?"
+					description="Logging allows you to ban irresponsible users (eg. spammers) by ip address">
+					<option value="Y">Always</option>
+					<option value="A">Anonymous only</option>
+					<option value="N">Never</option>
+				</field>
+				<field name="allow_anonymous" type="radio" default="0" label="Anonymous comments?"
+					description="Allow users who aren't logged in to comment?">
+					<option value="1">OK</option>
+					<option value="0">Disallow</option>
+				</field>
+				<field name="autopub_anonymous" type="radio" default="0" label="Autopublish anonymous comments?"
+					description="Autopublish comments made by users who aren't logged in?">
+					<option value="1">Autopublish</option>
+					<option value="0">Publish in back end</option>
+				</field>
+				<field name="honeypot" type="radio" default="1" label="Include invisible honeypot field on form?"
+					description="Also called 'invisible captcha' this helps prevent comment spam and should be set to Yes.">
+					<option value="1">Yes (recommended)</option>
+					<option value="0">No</option>
+				</field>
+				<field name="require_captcha" type="radio" default="A" label="Require CAPTCHA?" description="Require poster to solve a CAPTCHA?">
+					<option value="Y">Always</option>
+					<option value="A">Anonymous only</option>
+					<option value="N">Never</option>
+				</field>
+				<field name="captcha_type" type="radio" default="O" label="CAPTCHA Type"
+					description="To use reCaptcha you must download keys from recaptcha.net - see components/com_joomoobase/doc/captcha.txt">
+					<option value="O">OpenCaptcha</option>
+					<option value="R">reCAPTCHA</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
